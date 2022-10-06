@@ -24,6 +24,7 @@ header
     justify-content: space-between;
     position: fixed;
     width: 100%;
+    height: 10vh;
     padding: 1em 8em;
     background: #161a20;
     box-shadow: 0 5px 20px 5px rgba(0, 0, 0, 0.3);
@@ -51,14 +52,14 @@ nav a
     text-decoration: none;
     color: #fff;
     padding: 1em 2em;
-    border: 1px solid transparent;
+    border: 0.1vh solid transparent;
     border-radius: 0.3em;
     transition: 0.3s;
 }
   
 nav a:hover 
 {
-    border: 1px solid #f05454;
+    border: 0.1vh solid #f05454;
 }
   
   /* ========== Hero Section ==========*/
@@ -90,9 +91,15 @@ body::-webkit-scrollbar:hover
     background-position: bottom;
 }
 
+
 body::-webkit-scrollbar-thumb
 {
     border-radius: 2vh;
+    background: rgba(255, 255, 255,1);
+}
+
+body::-webkit-scrollbar-thumb:hover
+{
     background: rgba(255, 255, 255,0.5);
 }
 
@@ -100,7 +107,7 @@ body::-webkit-scrollbar-thumb
 {
     width: 20vh;
     height: 20vh;
-    border: 2px solid rgb(255, 255, 255);
+    border: 0.2vh solid rgb(255, 255, 255);
     border-radius: 85% 15% 13% 87% / 86% 89% 11% 14%;
     animation: loader1 2s infinite ease-in-out alternate;
 }
@@ -115,7 +122,7 @@ body::-webkit-scrollbar-thumb
 {
     width: 20vh;
     height: 20vh;
-    border: 2px solid rgb(255, 255, 255);
+    border: 0.2vh solid rgb(255, 255, 255);
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     animation: loader2 2s infinite ease-in-out alternate;
 }
@@ -130,7 +137,7 @@ body::-webkit-scrollbar-thumb
 {
     width: 20vh;
     height: 20vh;
-    border: 2px solid rgb(255, 255, 255);
+    border: 0.2vh solid rgb(255, 255, 255);
     border-radius: 100% 0% 50% 50% / 50% 0% 100% 50%;
     animation: loader3 2s infinite ease-in-out alternate;
     display: flex;
@@ -162,7 +169,7 @@ body::-webkit-scrollbar-thumb
 
 .BlockTxt-right,.BlockTxt-top,.BlockTxt-left,.BlockTxt-bottom
 {
-    border: 2px solid rgb(255, 255, 255);
+    border: 0.2vh solid rgb(255, 255, 255);
     width: 20vh;
     height: 10vh;
     margin: 0vh 5vh;
@@ -175,8 +182,7 @@ body::-webkit-scrollbar-thumb
     height: 10vh;
     display: block;
     background: linear-gradient(90deg,rgb(222, 222, 222),rgb(155, 155, 155));
-    transform: translateX(-8vh) translateY(-2vh);
-    opacity:0;
+    transform: translateX(-2vh) translateY(-2vh);
 }
 
 .BlockTxt-right::after,.BlockTxt-top::after,.BlockTxt-left::after,.BlockTxt-bottom::after
@@ -188,9 +194,9 @@ body::-webkit-scrollbar-thumb
     height: 10vh;
     display: flex;
     font-size: 3vh;
-    background-image: linear-gradient(90deg,rgb(0,0,191),rgb(0, 0, 255),rgb(191,0,0),rgb(255,0,0));
+    background-image: linear-gradient(90deg,rgb(191,0,0),rgb(255,0,0),rgb(0,0,191),rgb(0, 0, 255));
     background-size: 300%;
-    background-position: left;
+    background-position: right;
     transform: translateX(-2vh) translateY(-12vh);
 }
 
@@ -219,13 +225,195 @@ body::-webkit-scrollbar-thumb
 
 .BlockTxt-right:hover::after,.BlockTxt-top:hover::after,.BlockTxt-left:hover::after,.BlockTxt-bottom:hover::after
 {
-    transition: 1s;
+    transition: 0.5s;
     transform: translateX(2vh) translateY(-8vh);
-    background-position: right;
+    background-position: left;
 }
 
 .BlockTxt-right:not(:hover)::after,.BlockTxt-top:not(:hover)::after,.BlockTxt-left:not(:hover)::after,.BlockTxt-bottom:not(:hover)::after
 {
-    transition: 1s 0.1s;
+    transition: 0.5s 0.1s;
 }
 
+.BlockTxt-right:hover::before,.BlockTxt-top:hover::before,.BlockTxt-left:hover::before,.BlockTxt-bottom:hover::before
+{
+    transition: 0.5s;
+    transform: translateX(4vh) translateY(4vh);
+}
+
+.BlockTxt-right:not(:hover)::before,.BlockTxt-top:not(:hover)::before,.BlockTxt-left:not(:hover)::before,.BlockTxt-bottom:not(:hover)::before
+{
+    transition: 0.5s 0.1s;
+}
+
+.Notif
+{
+    width: 6vh;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.NotifStart
+{
+    padding-left: 2vh;
+    padding-top: 2vh;
+}
+
+.Notif:hover
+{
+    height: 36vh;
+    width: 30vh;
+    transition: 2s;
+}
+
+.Notif:hover > .NotifStart
+{
+    width: 30vh;
+    border-radius: 3vh 3vh 0vh 0vh;
+    transition: 2s;
+    background: rgb(127, 127, 255);
+}
+
+.Notif:hover > .NotifLine, .Notif:hover > .NotifElem, .Notif:hover > .NotifEnd, .Notif:hover .Circle
+{
+    opacity: 1;
+    transition: 2s;
+}
+
+.Circle
+{
+    background: rgb(127, 127, 255);
+    color: white;
+    opacity: 0;
+    width: 3vh;
+    height: 3vh;
+    border-radius: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3vh;
+    margin-right: 1vh;
+}
+
+.NotifElem > p
+{
+    color: black;
+}
+
+.NotifElem:hover
+{
+    transform: scale(1.1);
+    background: rgb(127, 127, 255);
+    border-radius: 1vh;
+}
+
+.Notif:not(:hover), .Notif:not(:hover) > .NotifLine, .Notif:not(:hover) > .NotifElem, .Notif:not(:hover) > .NotifEnd, .Notif:not(:hover) > .NotifStart, .Notif:not(:hover) .Circle
+{
+    transition: 2s 0.1s;
+}
+
+.NotifElem:hover > .Circle
+{
+    background: white;
+    color: rgb(127, 127, 255);
+    transition: 2s;
+}
+
+.NotifElem:hover > p
+{
+    color: white;
+    transition: 2s;
+}
+
+.Notif:hover > .NotifLine, .Notif:hover > .NotifEnd
+{
+    height: 3vh;
+    width: 30vh;
+    transition: 2s;
+}
+
+.Notif:hover > .NotifElem
+{
+    height: 6vh;
+    width: 30vh;
+    transition: 2s;
+}
+
+.NotifStart
+{
+    width: 6vh;
+    height: 6vh;
+    background: white;
+    border-radius: 3vh;
+    display: flex;
+}
+
+.NotifLine, .NotifEnd
+{
+    width: 0vh;
+    height: 0vh;
+    background: white;
+    opacity: 0;
+}
+
+.NotifEnd
+{
+    border-radius: 0vh 0vh 3vh 3vh;
+}
+
+.NotifElem
+{
+    height: 0vh;
+    width: 0vh;
+    background: white;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#section-2
+{
+    display: flex;
+    flex-direction:column;
+}
+
+
+
+#section-3 > div
+{
+    width: 30vh;
+    height: 40vh;
+    display: flex;
+    background: linear-gradient(45deg, rgb(246, 255, 0), rgb(255, 102, 0));
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+div > .CardTwo
+{
+    width: 15vh;
+    height: 40vh;
+    box-shadow: 0.5vh 0vh 0.5vh rgba(122,122,122,0.5);
+}
+
+.CardTwo::before
+{
+    content: " ";
+    width: 15vh;
+    height: 40vh;
+    position: absolute;
+    transform: translateX(15vh);
+}
+
+
+
+#section-3
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
