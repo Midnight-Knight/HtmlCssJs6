@@ -55,6 +55,7 @@ nav a
     border: 0.1vh solid transparent;
     border-radius: 0.3em;
     transition: 0.3s;
+    font-size: 1.6vh;
 }
   
 nav a:hover 
@@ -76,32 +77,46 @@ footer
     padding: 3em;
 }
   
-body::-webkit-scrollbar 
+::-webkit-scrollbar 
 {
-    width: 2vh;
-    border-radius: 2vh;
+    width: 1vh;
+    border-radius: 1vh;
     background-image: linear-gradient(45deg,red,blue,yellow,green);
     background-size: auto 300%;
     background-position: top;
 }
 
-body::-webkit-scrollbar:hover
+::-webkit-scrollbar:hover
 {
     transition: 2s;
     background-position: bottom;
 }
 
 
-body::-webkit-scrollbar-thumb
+::-webkit-scrollbar-thumb
 {
-    border-radius: 2vh;
+    border-radius: 1vh;
     background: rgba(255, 255, 255,1);
 }
 
-body::-webkit-scrollbar-thumb:hover
+::-webkit-scrollbar-thumb:hover
 {
     background: rgba(255, 255, 255,0.5);
 }
+
+html
+{
+    scrollbar-width: thin;
+    scrollbar-color: rgb(255,0,0) rgb(0,255,0);
+    transition: 2s;
+}
+
+html:hover
+{
+    scrollbar-color: rgb(0,0,255) rgb(0,255,0);
+}
+
+
 
 .loader1
 {
@@ -388,28 +403,292 @@ body::-webkit-scrollbar-thumb:hover
     width: 30vh;
     height: 40vh;
     display: flex;
-    background: linear-gradient(45deg, rgb(246, 255, 0), rgb(255, 102, 0));
+    
     justify-content: flex-start;
     align-items: flex-start;
 }
 
-div > .CardTwo
+/* Card 1 */
+
+.One
 {
+    width: 30vh;
+    height: 40vh;
+    background: linear-gradient(45deg, rgb(119, 0, 255), rgb(255, 0, 64));
+}
+
+.CardOne
+{
+    transform: translateY(40vh);
+    width: 30vh;
+    height: 0vh;
+    background: white;
+    padding-left: 1vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.One::after
+{
+    content: "0";
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-weight: 500;
+    font-size: 12vh;
     width: 15vh;
     height: 40vh;
     box-shadow: 0.5vh 0vh 0.5vh rgba(122,122,122,0.5);
+    position: absolute;
 }
 
-.CardTwo::before
+.CardOne > p,.CardOne > h1
 {
-    content: " ";
+    color: black;
+    opacity: 0;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+.One::before
+{
+    content: "1";
+    font-weight: 500;
+    font-size: 12vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     width: 15vh;
     height: 40vh;
     position: absolute;
     transform: translateX(15vh);
 }
 
+.One:hover > .CardOne
+{
+    height: 35vh;
+    transition: 2s;
+    transform: translateY(5vh);
+}
 
+.One:hover > .CardOne > p,.One:hover > .CardOne > h1
+{
+    opacity: 1;
+    transition: 4s;
+}
+
+.One:hover
+{
+    background-position: right;
+    transition: 2s;
+}
+
+.One:hover::after,.One:hover::before
+{
+    font-size: 4vh;
+    height: 5vh;
+    transition: 2s;
+}
+
+.One:not(:hover),.One:not(:hover)::after,.One:not(:hover)::before,.One:not(:hover) > .CardOne
+{
+    transition: 2s 0.1s;
+}
+
+.One:not(:hover) > .CardOne > p,.One:not(:hover) > .CardOne > h1
+{
+    transition: 1s 0.1s;
+}
+
+/* Card 2 */
+
+.Two
+{
+    width: 30vh;
+    height: 40vh;
+    background: linear-gradient(45deg, rgb(246, 255, 0), rgb(255, 102, 0));
+}
+
+.CardTwo
+{
+    transform: translateY(40vh);
+    width: 30vh;
+    height: 0vh;
+    background: white;
+    padding-left: 1vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.Two::after
+{
+    content: "0";
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-weight: 500;
+    font-size: 12vh;
+    width: 15vh;
+    height: 40vh;
+    box-shadow: 0.5vh 0vh 0.5vh rgba(122,122,122,0.5);
+    position: absolute;
+}
+
+.CardTwo > p,.CardTwo > h1
+{
+    color: black;
+    opacity: 0;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+.Two::before
+{
+    content: "2";
+    font-weight: 500;
+    font-size: 12vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 15vh;
+    height: 40vh;
+    position: absolute;
+    transform: translateX(15vh);
+}
+
+.Two:hover > .CardTwo
+{
+    height: 35vh;
+    transition: 2s;
+    transform: translateY(5vh);
+}
+
+.Two:hover > .CardTwo > p,.Two:hover > .CardTwo > h1
+{
+    opacity: 1;
+    transition: 4s;
+}
+
+.Two:hover
+{
+    background-position: right;
+    transition: 2s;
+}
+
+.Two:hover::after,.Two:hover::before
+{
+    font-size: 4vh;
+    height: 5vh;
+    transition: 2s;
+}
+
+.Two:not(:hover),.Two:not(:hover)::after,.Two:not(:hover)::before,.Two:not(:hover) > .CardTwo
+{
+    transition: 2s 0.1s;
+}
+
+.Two:not(:hover) > .CardTwo > p,.Two:not(:hover) > .CardTwo > h1
+{
+    transition: 1s 0.1s;
+}
+
+/* Card 3 */
+
+.Three
+{
+    width: 30vh;
+    height: 40vh;
+    background: linear-gradient(45deg, rgb(0, 17, 255), rgb(21, 255, 0));
+}
+
+.CardThree
+{
+    transform: translateY(40vh);
+    width: 30vh;
+    height: 0vh;
+    background: white;
+    padding-left: 1vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.Three::after
+{
+    content: "0";
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-weight: 500;
+    font-size: 12vh;
+    width: 15vh;
+    height: 40vh;
+    box-shadow: 0.5vh 0vh 0.5vh rgba(122,122,122,0.5);
+    position: absolute;
+}
+
+.CardThree > p,.CardThree > h1
+{
+    color: black;
+    opacity: 0;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+.Three::before
+{
+    content: "3";
+    font-weight: 500;
+    font-size: 12vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 15vh;
+    height: 40vh;
+    position: absolute;
+    transform: translateX(15vh);
+}
+
+.Three:hover > .CardThree
+{
+    height: 35vh;
+    transition: 2s;
+    transform: translateY(5vh);
+}
+
+.Three:hover > .CardThree > p,.Three:hover > .CardThree > h1
+{
+    opacity: 1;
+    transition: 4s;
+}
+
+.Three:hover
+{
+    background-position: right;
+    transition: 2s;
+}
+
+.Three:hover::after,.Three:hover::before
+{
+    font-size: 4vh;
+    height: 5vh;
+    transition: 2s;
+}
+
+.Three:not(:hover),.Three:not(:hover)::after,.Three:not(:hover)::before,.Three:not(:hover) > .CardThree
+{
+    transition: 2s 0.1s;
+}
+
+.Three:not(:hover) > .CardThree > p,.Three:not(:hover) > .CardThree > h1
+{
+    transition: 1s 0.1s;
+}
 
 #section-3
 {
