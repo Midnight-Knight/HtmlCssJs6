@@ -4,11 +4,13 @@
     padding: 0;
     margin: 0;
 }
+
 body 
 {
     font-family: sans-serif;
     background: #222831;
     color: white;
+    flex-wrap: wrap;
 }
   
 header,nav,section,.content-container,footer 
@@ -16,6 +18,7 @@ header,nav,section,.content-container,footer
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
   
 /* ========== Menu ==========*/
@@ -24,8 +27,8 @@ header
     justify-content: space-between;
     position: fixed;
     width: 100%;
-    height: 10vh;
-    padding: 1em 8em;
+    height: auto;
+    padding: 2vh 8em;
     background: #161a20;
     box-shadow: 0 5px 20px 5px rgba(0, 0, 0, 0.3);
     z-index: 10;
@@ -68,13 +71,14 @@ nav a:hover
 section 
 {
     width: 100%;
-    height: 100vh;
+    height: 150vh;
 }
   
 /* ========== Footer ==========*/
 footer 
 {
     background: #161a20;
+    width: 100%;
     padding: 3em;
 }
   
@@ -175,6 +179,7 @@ html:hover
 .ContainerBlockTxt
 {
     width: 100vh;
+    height: auto;
     display: flex;
     flex-flow: wrap;
     justify-content: center;
@@ -188,7 +193,7 @@ html:hover
     border: 0.2vh solid rgb(255, 255, 255);
     width: 20vh;
     height: 10vh;
-    margin: 0vh 5vh;
+    margin: 4vh 5vh;
 }
 
 .BlockTxt-right::before,.BlockTxt-top::before,.BlockTxt-left::before,.BlockTxt-bottom::before
@@ -416,7 +421,7 @@ html:hover
     width: 30vh;
     height: 40vh;
     background: linear-gradient(45deg, rgb(119, 0, 255), rgb(255, 0, 64));
-    box-shadow: 1vh 2vh rgba(0, 0, 0, 0.5);
+    box-shadow: 2vh 4vh rgba(0, 0, 0, 0.5);
 }
 
 .CardOne
@@ -511,7 +516,7 @@ html:hover
     width: 30vh;
     height: 40vh;
     background: linear-gradient(45deg, rgb(246, 255, 0), rgb(255, 102, 0));
-    box-shadow: 1vh 2vh rgba(0, 0, 0, 0.5);
+    box-shadow: 2vh 4vh rgba(0, 0, 0, 0.5);
 }
 
 .CardTwo
@@ -607,7 +612,7 @@ html:hover
     width: 30vh;
     height: 40vh;
     background: linear-gradient(45deg, rgb(0, 17, 255), rgb(21, 255, 0));
-    box-shadow: 1vh 2vh rgba(0, 0, 0, 0.5);
+    box-shadow: 2vh 4vh rgba(0, 0, 0, 0.5);
 }
 
 .CardThree
@@ -718,7 +723,7 @@ html:hover
     align-items: flex-start;
     justify-content: flex-end;
     z-index: 1;
-    box-shadow: 1vh 2vh rgba(0, 0, 0, 0.5);
+    box-shadow: 2vh 4vh rgba(0, 0, 0, 0.5);
 }
 
 .CardPng1 > h1, .CardPng1 > p, .CardPng2 > h1, .CardPng2 > p, .CardPng3 > h1, .CardPng3 > p
@@ -810,7 +815,7 @@ html:hover
     width: 40vh;
     height: 30vh;
     background-color: white;
-    box-shadow: 1vh 2vh rgba(0, 0, 0, 0.5);
+    box-shadow: 2vh 4vh rgba(0, 0, 0, 0.5);
     transition: 2s;
     display: flex;
     flex-direction: column;
@@ -836,7 +841,7 @@ html:hover
     position: absolute;
     background-size: cover;
     border-radius: 1vh;
-    box-shadow: 0.5vh 1vh rgba(0, 0, 0, 0.5);
+    box-shadow: 1vh 2vh rgba(0, 0, 0, 0.5);
     transform: translateY(-10vh);
     transition: 2s;
 }
@@ -870,4 +875,62 @@ html:hover
 {
     opacity: 1;
     transform: translateY(0vh);
+}
+
+/* SuperBigCard */
+
+#section-6
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.SuperBigCard
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.SuperBigCard::before
+{
+    background-image: url(sony-playstation.gif);
+    background-size: cover;
+    width: 60vh;
+    height: 40vh;
+    box-shadow: 2vh 4vh rgba(0, 0, 0, 0.5);
+    border: 0.2vh solid white;
+    border-radius: 1vh;
+    content: " ";
+    position: absolute;
+}
+
+.MiniBigCard
+{
+    width: 60vh;
+    height: 30vh;
+    background-color: black;
+    transform: translateX(-5vh);
+    color: white;
+    border-radius: 1vh;
+    border: 0.2vh solid white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.MiniBigCard > h1, .MiniBigCard > p
+{
+    margin: 8vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.SuperBigCard:hover > .MiniBigCard
+{
+    opacity: 1;
 }
