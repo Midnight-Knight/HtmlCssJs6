@@ -12,6 +12,11 @@ body
     color: white;
     flex-wrap: wrap;
 }
+
+html
+{
+    scroll-behavior: smooth;
+}
   
 header,nav,section,.content-container,footer 
 {
