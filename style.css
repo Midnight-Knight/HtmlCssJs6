@@ -28,6 +28,7 @@ header
     padding: 1em 8em;
     background: #161a20;
     box-shadow: 0 5px 20px 5px rgba(0, 0, 0, 0.3);
+    z-index: 10;
 }
   
 #logo 
@@ -415,6 +416,7 @@ html:hover
     width: 30vh;
     height: 40vh;
     background: linear-gradient(45deg, rgb(119, 0, 255), rgb(255, 0, 64));
+    box-shadow: 1vh 2vh rgba(0, 0, 0, 0.5);
 }
 
 .CardOne
@@ -509,6 +511,7 @@ html:hover
     width: 30vh;
     height: 40vh;
     background: linear-gradient(45deg, rgb(246, 255, 0), rgb(255, 102, 0));
+    box-shadow: 1vh 2vh rgba(0, 0, 0, 0.5);
 }
 
 .CardTwo
@@ -522,6 +525,7 @@ html:hover
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    
 }
 
 .Two::after
@@ -603,6 +607,7 @@ html:hover
     width: 30vh;
     height: 40vh;
     background: linear-gradient(45deg, rgb(0, 17, 255), rgb(21, 255, 0));
+    box-shadow: 1vh 2vh rgba(0, 0, 0, 0.5);
 }
 
 .CardThree
@@ -690,9 +695,179 @@ html:hover
     transition: 1s 0.1s;
 }
 
-#section-3
+#section-3, #section-4
 {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    
+}
+
+/* CardPng */
+
+
+#section-4 > .CardPng1,#section-4 > .CardPng2,#section-4 > .CardPng3
+{
+    height: 40vh;
+    width: 30vh;
+    background-size: cover;
+    z-index: 2;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    z-index: 1;
+    box-shadow: 1vh 2vh rgba(0, 0, 0, 0.5);
+}
+
+.CardPng1 > h1, .CardPng1 > p, .CardPng2 > h1, .CardPng2 > p, .CardPng3 > h1, .CardPng3 > p
+{
+    padding: 1vh;
+    z-index: 2;
+    color: white;
+    opacity: 0;
+    transition: 2s;
+}
+
+.CardPng1 > button, .CardPng2 > button, .CardPng3 > button
+{
+    width: 10vh;
+    height: 4vh;
+    margin: 1vh;
+    padding: 1vh;
+    z-index: 2;
+    background: white;
+    border-radius: 0.1vh;
+    border-color: white;
+    color: black;
+    opacity: 0;
+    transition: 2s;
+}
+
+#section-4 > .CardPng1
+{
+    background-image: url(60412cbbdd5f2d50167c591f-1.jpg);
+}
+
+#section-4 > .CardPng2
+{
+    background-image: url(загружено.jpg);
+}
+
+#section-4 > .CardPng3
+{
+    background-image: url(bdugnvf1.jpg);
+}
+
+.CardPng1::before,.CardPng2::before,.CardPng3::before
+{
+    content: " ";
+    opacity: 0;
+    height: 40vh;
+    width: 30vh;
+    position: absolute;
+    z-index: 1;
+    transition: 2s;
+}
+
+.CardPng1::before
+{
+    background: linear-gradient(0deg,rgba(0, 0, 255, 1),rgba(0, 0, 255, 0.8),rgba(0, 0, 255, 0.6),rgba(0, 0, 255, 0.4),rgba(0, 0, 255, 0.2),rgba(0, 0, 255, 0.1));
+}
+
+.CardPng2::before
+{
+    background: linear-gradient(0deg,rgba(0, 255, 0, 1),rgba(0, 255, 0, 0.8),rgba(0, 255, 0, 0.6),rgba(0, 255, 0, 0.4),rgba(0, 255, 0,0.2),rgba(0, 255, 0,0.1));
+}
+
+.CardPng3::before
+{
+    background: linear-gradient(0deg,rgba(255, 0, 0, 1),rgba(255, 0, 0, 0.8),rgba(255, 0, 0, 0.6),rgba(255, 0, 0, 0.4),rgba(255, 0, 0, 0.2),rgba(255, 0, 0, 0.1));
+}
+
+.CardPng2:hover::before, .CardPng1:hover::before, .CardPng3:hover::before
+{
+    opacity: 1;
+}
+
+.CardPng1:hover > h1, .CardPng1:hover > p, .CardPng1:hover > button,.CardPng2:hover > h1, .CardPng2:hover > p, .CardPng2:hover > button,.CardPng3:hover > h1, .CardPng3:hover > p, .CardPng3:hover > button
+{
+    opacity: 1;
+}
+
+/* BigCardPng */
+
+#section-5
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#section-5 > .BigCard1, #section-5 > .BigCard2, #section-5 > .BigCard3
+{
+    width: 40vh;
+    height: 30vh;
+    background-color: white;
+    box-shadow: 1vh 2vh rgba(0, 0, 0, 0.5);
+    transition: 2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.BigCard1 > h1, .BigCard1 > p,.BigCard2 > h1, .BigCard2 > p,.BigCard3 > h1, .BigCard3 > p
+{
+    margin: 1vh 2VH;
+    opacity: 0;
+    transition: 2s;
+    transform: translateY(8vh);
+    text-align: center;
+}
+
+.BigCard1::before,.BigCard2::before,.BigCard3::before
+{
+    content: " ";
+    width: 32vh;
+    height: 20vh;
+    position: absolute;
+    background-size: cover;
+    border-radius: 1vh;
+    box-shadow: 0.5vh 1vh rgba(0, 0, 0, 0.5);
+    transform: translateY(-10vh);
+    transition: 2s;
+}
+
+.BigCard1::before
+{
+    background-image: url(6232.jpg);
+}
+
+.BigCard2::before
+{
+    background-image: url(xbox-series-s-white_2.jpg);
+}
+
+.BigCard3::before
+{
+    background-image: url(559e4976c7b64d541e8bd51352765651.jpg);
+}
+
+#section-5 > .BigCard1:hover,#section-5 > .BigCard2:hover,#section-5 > .BigCard3:hover
+{
+    height: 50vh;
+}
+
+.BigCard1:hover::before,.BigCard2:hover::before,.BigCard3:hover::before
+{
+    transform: translateY(-20vh);
+}
+
+.BigCard1:hover > h1, .BigCard1:hover  > p,.BigCard2:hover  > h1, .BigCard2:hover  > p,.BigCard3:hover  > h1, .BigCard3:hover  > p
+{
+    opacity: 1;
+    transform: translateY(0vh);
 }
