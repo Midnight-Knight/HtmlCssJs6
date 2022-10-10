@@ -48,7 +48,7 @@ header
 nav 
 {
     justify-content: space-between;
-    width: 40%;
+    flex-flow: wrap;
 }
   
 nav a 
@@ -178,7 +178,6 @@ html:hover
 
 .ContainerBlockTxt
 {
-    width: 100vh;
     height: auto;
     display: flex;
     flex-flow: wrap;
