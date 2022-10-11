@@ -5,6 +5,44 @@
     margin: 0;
 }
 
+*, a, p, h6
+{
+    font-size: 2vmin;
+}
+
+button
+{
+    font-size: 1.5vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h5
+{
+    font-size: 2.5vmin;
+}
+
+h4
+{
+    font-size: 3vmin;
+}
+
+h3
+{
+    font-size: 3.5vmin;
+}
+
+h2
+{
+    font-size: 4vmin;
+}
+
+h1
+{
+    font-size: 5vmin;
+}
+
 body 
 {
     font-family: sans-serif;
@@ -33,15 +71,17 @@ header
     position: fixed;
     width: 100%;
     height: auto;
-    padding: 2vh 8em;
+    padding: 2vmin 6vmin;
+    display: flex;
+    flex-wrap: wrap;
     background: #161a20;
-    box-shadow: 0 5px 20px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5vmin 20vmin 5vmin rgba(0, 0, 0, 0.3);
     z-index: 10;
 }
   
 #logo 
 {
-    width: 5vh;
+    width: 5vmin;
     transition: 0.3s;
 }
   
@@ -53,30 +93,34 @@ header
 nav 
 {
     justify-content: space-between;
+    display: flex;
     flex-flow: wrap;
+    height: auto;
 }
   
 nav a 
 {
     text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
     color: #fff;
-    padding: 1em 2em;
-    border: 0.1vh solid transparent;
-    border-radius: 0.3em;
+    padding: 1vmin 2vmin;
+    border: 0.1vmin solid transparent;
+    border-radius: 0.3vmin;
     transition: 0.3s;
-    font-size: 1.6vh;
+    font-size: 1.6vmin;
 }
   
 nav a:hover 
 {
-    border: 0.1vh solid #f05454;
+    border: 0.1vmin solid #f05454;
 }
   
   /* ========== Hero Section ==========*/
 section 
 {
     width: 100%;
-    height: 100vh;
+    height: 100vmin;
 }
   
 /* ========== Footer ==========*/
@@ -84,13 +128,13 @@ footer
 {
     background: #161a20;
     width: 100%;
-    padding: 3em;
+    padding: 3vmin;
 }
   
 ::-webkit-scrollbar 
 {
-    width: 1vh;
-    border-radius: 1vh;
+    width: 1vmin;
+    border-radius: 1vmin;
     background-image: linear-gradient(45deg,red,blue,yellow,green);
     background-size: auto 300%;
     background-position: top;
@@ -105,7 +149,7 @@ footer
 
 ::-webkit-scrollbar-thumb
 {
-    border-radius: 1vh;
+    border-radius: 1vmin;
     background: rgba(255, 255, 255,1);
 }
 
@@ -130,9 +174,9 @@ html:hover
 
 .loader1
 {
-    width: 20vh;
-    height: 20vh;
-    border: 0.2vh solid rgb(255, 255, 255);
+    width: 20vmin;
+    height: 20vmin;
+    border: 0.2vmin solid rgb(255, 255, 255);
     border-radius: 85% 15% 13% 87% / 86% 89% 11% 14%;
     animation: loader1 2s infinite ease-in-out alternate;
 }
@@ -145,9 +189,9 @@ html:hover
 
 .loader2
 {
-    width: 20vh;
-    height: 20vh;
-    border: 0.2vh solid rgb(255, 255, 255);
+    width: 20vmin;
+    height: 20vmin;
+    border: 0.2vmin solid rgb(255, 255, 255);
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     animation: loader2 2s infinite ease-in-out alternate;
 }
@@ -160,9 +204,9 @@ html:hover
 
 .loader3
 {
-    width: 20vh;
-    height: 20vh;
-    border: 0.2vh solid rgb(255, 255, 255);
+    width: 20vmin;
+    height: 20vmin;
+    border: 0.2vmin solid rgb(255, 255, 255);
     border-radius: 100% 0% 50% 50% / 50% 0% 100% 50%;
     animation: loader3 2s infinite ease-in-out alternate;
     display: flex;
@@ -189,25 +233,25 @@ html:hover
     justify-content: center;
     justify-items: center;
     align-items: center;
-    margin-top: 10vh;
+    margin-top: 10vmin;
 }
 
 .BlockTxt-right,.BlockTxt-top,.BlockTxt-left,.BlockTxt-bottom
 {
-    border: 0.2vh solid rgb(255, 255, 255);
-    width: 20vh;
-    height: 10vh;
-    margin: 4vh 5vh;
+    border: 0.2vmin solid rgb(255, 255, 255);
+    width: 20vmin;
+    height: 10vmin;
+    margin: 4vmin 5vmin;
 }
 
 .BlockTxt-right::before,.BlockTxt-top::before,.BlockTxt-left::before,.BlockTxt-bottom::before
 {
     content: "";
-    width: 20vh;
-    height: 10vh;
+    width: 20vmin;
+    height: 10vmin;
     display: block;
     background: linear-gradient(90deg,rgb(222, 222, 222),rgb(155, 155, 155));
-    transform: translateX(-2vh) translateY(-2vh);
+    transform: translateX(-2vmin) translateY(-2vmin);
 }
 
 .BlockTxt-right::after,.BlockTxt-top::after,.BlockTxt-left::after,.BlockTxt-bottom::after
@@ -215,14 +259,14 @@ html:hover
     color: white;
     justify-content: center;
     align-items: center;
-    width: 20vh;
-    height: 10vh;
+    width: 20vmin;
+    height: 10vmin;
     display: flex;
-    font-size: 3vh;
+    font-size: 3vmin;
     background-image: linear-gradient(90deg,rgb(191,0,0),rgb(255,0,0),rgb(0,0,191),rgb(0, 0, 255));
     background-size: 300%;
     background-position: right;
-    transform: translateX(-2vh) translateY(-12vh);
+    transform: translateX(-2vmin) translateY(-12vmin);
 }
 
 .BlockTxt-right::after
@@ -251,7 +295,7 @@ html:hover
 .BlockTxt-right:hover::after,.BlockTxt-top:hover::after,.BlockTxt-left:hover::after,.BlockTxt-bottom:hover::after
 {
     transition: 0.5s;
-    transform: translateX(2vh) translateY(-8vh);
+    transform: translateX(2vmin) translateY(-8vmin);
     background-position: left;
 }
 
@@ -263,7 +307,7 @@ html:hover
 .BlockTxt-right:hover::before,.BlockTxt-top:hover::before,.BlockTxt-left:hover::before,.BlockTxt-bottom:hover::before
 {
     transition: 0.5s;
-    transform: translateX(4vh) translateY(4vh);
+    transform: translateX(4vmin) translateY(4vmin);
 }
 
 .BlockTxt-right:not(:hover)::before,.BlockTxt-top:not(:hover)::before,.BlockTxt-left:not(:hover)::before,.BlockTxt-bottom:not(:hover)::before
@@ -273,8 +317,8 @@ html:hover
 
 .Notif
 {
-    width: 6vh;
-    height: 6vh;
+    width: 6vmin;
+    height: 6vmin;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -283,21 +327,21 @@ html:hover
 
 .NotifStart
 {
-    padding-left: 2vh;
-    padding-top: 2vh;
+    padding-left: 2vmin;
+    padding-top: 2vmin;
 }
 
 .Notif:hover
 {
-    height: 36vh;
-    width: 30vh;
+    height: 36vmin;
+    width: 30vmin;
     transition: 2s;
 }
 
 .Notif:hover > .NotifStart
 {
-    width: 30vh;
-    border-radius: 3vh 3vh 0vh 0vh;
+    width: 30vmin;
+    border-radius: 3vmin 3vmin 0vmin 0vmin;
     transition: 2s;
     background: rgb(127, 127, 255);
 }
@@ -313,14 +357,14 @@ html:hover
     background: rgb(127, 127, 255);
     color: white;
     opacity: 0;
-    width: 3vh;
-    height: 3vh;
-    border-radius: 3vh;
+    width: 3vmin;
+    height: 3vmin;
+    border-radius: 3vmin;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 3vh;
-    margin-right: 1vh;
+    margin-left: 3vmin;
+    margin-right: 1vmin;
 }
 
 .NotifElem > p
@@ -332,7 +376,7 @@ html:hover
 {
     transform: scale(1.1);
     background: rgb(127, 127, 255);
-    border-radius: 1vh;
+    border-radius: 1vmin;
 }
 
 .Notif:not(:hover), .Notif:not(:hover) > .NotifLine, .Notif:not(:hover) > .NotifElem, .Notif:not(:hover) > .NotifEnd, .Notif:not(:hover) > .NotifStart, .Notif:not(:hover) .Circle
@@ -355,44 +399,44 @@ html:hover
 
 .Notif:hover > .NotifLine, .Notif:hover > .NotifEnd
 {
-    height: 3vh;
-    width: 30vh;
+    height: 3vmin;
+    width: 30vmin;
     transition: 2s;
 }
 
 .Notif:hover > .NotifElem
 {
-    height: 6vh;
-    width: 30vh;
+    height: 6vmin;
+    width: 30vmin;
     transition: 2s;
 }
 
 .NotifStart
 {
-    width: 6vh;
-    height: 6vh;
+    width: 6vmin;
+    height: 6vmin;
     background: white;
-    border-radius: 3vh;
+    border-radius: 3vmin;
     display: flex;
 }
 
 .NotifLine, .NotifEnd
 {
-    width: 0vh;
-    height: 0vh;
+    width: 0vmin;
+    height: 0vmin;
     background: white;
     opacity: 0;
 }
 
 .NotifEnd
 {
-    border-radius: 0vh 0vh 3vh 3vh;
+    border-radius: 0vmin 0vmin 3vmin 3vmin;
 }
 
 .NotifElem
 {
-    height: 0vh;
-    width: 0vh;
+    height: 0vmin;
+    width: 0vmin;
     background: white;
     opacity: 0;
     display: flex;
@@ -410,8 +454,8 @@ html:hover
 
 #section-3 > div
 {
-    width: 30vh;
-    height: 40vh;
+    width: 30vmin;
+    height: 40vmin;
     display: flex;
     
     justify-content: flex-start;
@@ -422,19 +466,19 @@ html:hover
 
 .One
 {
-    width: 30vh;
-    height: 40vh;
+    width: 30vmin;
+    height: 40vmin;
     background: linear-gradient(45deg, rgb(119, 0, 255), rgb(255, 0, 64));
-    box-shadow: 2vh 4vh rgba(0, 0, 0, 0.5);
+    box-shadow: 2vmin 4vmin rgba(0, 0, 0, 0.5);
 }
 
 .CardOne
 {
-    transform: translateY(40vh);
-    width: 30vh;
-    height: 0vh;
+    transform: translateY(40vmin);
+    width: 30vmin;
+    height: 0vmin;
     background: white;
-    padding-left: 1vh;
+    padding-left: 1vmin;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -448,10 +492,10 @@ html:hover
     justify-content: flex-end;
     align-items: center;
     font-weight: 500;
-    font-size: 12vh;
-    width: 15vh;
-    height: 40vh;
-    box-shadow: 0.5vh 0vh 0.5vh rgba(122,122,122,0.5);
+    font-size: 12vmin;
+    width: 15vmin;
+    height: 40vmin;
+    box-shadow: 0.5vmin 0vmin 0.5vmin rgba(122,122,122,0.5);
     position: absolute;
 }
 
@@ -459,29 +503,29 @@ html:hover
 {
     color: black;
     opacity: 0;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
+    padding-top: 1vmin;
+    padding-bottom: 1vmin;
 }
 
 .One::before
 {
     content: "1";
     font-weight: 500;
-    font-size: 12vh;
+    font-size: 12vmin;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 15vh;
-    height: 40vh;
+    width: 15vmin;
+    height: 40vmin;
     position: absolute;
-    transform: translateX(15vh);
+    transform: translateX(15vmin);
 }
 
 .One:hover > .CardOne
 {
-    height: 35vh;
+    height: 35vmin;
     transition: 2s;
-    transform: translateY(5vh);
+    transform: translateY(5vmin);
 }
 
 .One:hover > .CardOne > p,.One:hover > .CardOne > h1
@@ -498,8 +542,8 @@ html:hover
 
 .One:hover::after,.One:hover::before
 {
-    font-size: 4vh;
-    height: 5vh;
+    font-size: 4vmin;
+    height: 5vmin;
     transition: 2s;
 }
 
@@ -517,19 +561,19 @@ html:hover
 
 .Two
 {
-    width: 30vh;
-    height: 40vh;
+    width: 30vmin;
+    height: 40vmin;
     background: linear-gradient(45deg, rgb(246, 255, 0), rgb(255, 102, 0));
-    box-shadow: 2vh 4vh rgba(0, 0, 0, 0.5);
+    box-shadow: 2vmin 4vmin rgba(0, 0, 0, 0.5);
 }
 
 .CardTwo
 {
-    transform: translateY(40vh);
-    width: 30vh;
-    height: 0vh;
+    transform: translateY(40vmin);
+    width: 30vmin;
+    height: 0vmin;
     background: white;
-    padding-left: 1vh;
+    padding-left: 1vmin;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -544,10 +588,10 @@ html:hover
     justify-content: flex-end;
     align-items: center;
     font-weight: 500;
-    font-size: 12vh;
-    width: 15vh;
-    height: 40vh;
-    box-shadow: 0.5vh 0vh 0.5vh rgba(122,122,122,0.5);
+    font-size: 12vmin;
+    width: 15vmin;
+    height: 40vmin;
+    box-shadow: 0.5vmin 0vmin 0.5vmin rgba(122,122,122,0.5);
     position: absolute;
 }
 
@@ -555,29 +599,29 @@ html:hover
 {
     color: black;
     opacity: 0;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
+    padding-top: 1vmin;
+    padding-bottom: 1vmin;
 }
 
 .Two::before
 {
     content: "2";
     font-weight: 500;
-    font-size: 12vh;
+    font-size: 12vmin;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 15vh;
-    height: 40vh;
+    width: 15vmin;
+    height: 40vmin;
     position: absolute;
-    transform: translateX(15vh);
+    transform: translateX(15vmin);
 }
 
 .Two:hover > .CardTwo
 {
-    height: 35vh;
+    height: 35vmin;
     transition: 2s;
-    transform: translateY(5vh);
+    transform: translateY(5vmin);
 }
 
 .Two:hover > .CardTwo > p,.Two:hover > .CardTwo > h1
@@ -594,8 +638,8 @@ html:hover
 
 .Two:hover::after,.Two:hover::before
 {
-    font-size: 4vh;
-    height: 5vh;
+    font-size: 4vmin;
+    height: 5vmin;
     transition: 2s;
 }
 
@@ -613,19 +657,19 @@ html:hover
 
 .Three
 {
-    width: 30vh;
-    height: 40vh;
+    width: 30vmin;
+    height: 40vmin;
     background: linear-gradient(45deg, rgb(0, 17, 255), rgb(21, 255, 0));
-    box-shadow: 2vh 4vh rgba(0, 0, 0, 0.5);
+    box-shadow: 2vmin 4vmin rgba(0, 0, 0, 0.5);
 }
 
 .CardThree
 {
-    transform: translateY(40vh);
-    width: 30vh;
-    height: 0vh;
+    transform: translateY(40vmin);
+    width: 30vmin;
+    height: 0vmin;
     background: white;
-    padding-left: 1vh;
+    padding-left: 1vmin;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -639,10 +683,10 @@ html:hover
     justify-content: flex-end;
     align-items: center;
     font-weight: 500;
-    font-size: 12vh;
-    width: 15vh;
-    height: 40vh;
-    box-shadow: 0.5vh 0vh 0.5vh rgba(122,122,122,0.5);
+    font-size: 12vmin;
+    width: 15vmin;
+    height: 40vmin;
+    box-shadow: 0.5vmin 0vmin 0.5vmin rgba(122,122,122,0.5);
     position: absolute;
 }
 
@@ -650,29 +694,29 @@ html:hover
 {
     color: black;
     opacity: 0;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
+    padding-top: 1vmin;
+    padding-bottom: 1vmin;
 }
 
 .Three::before
 {
     content: "3";
     font-weight: 500;
-    font-size: 12vh;
+    font-size: 12vmin;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 15vh;
-    height: 40vh;
+    width: 15vmin;
+    height: 40vmin;
     position: absolute;
-    transform: translateX(15vh);
+    transform: translateX(15vmin);
 }
 
 .Three:hover > .CardThree
 {
-    height: 35vh;
+    height: 35vmin;
     transition: 2s;
-    transform: translateY(5vh);
+    transform: translateY(5vmin);
 }
 
 .Three:hover > .CardThree > p,.Three:hover > .CardThree > h1
@@ -689,8 +733,8 @@ html:hover
 
 .Three:hover::after,.Three:hover::before
 {
-    font-size: 4vh;
-    height: 5vh;
+    font-size: 4vmin;
+    height: 5vmin;
     transition: 2s;
 }
 
@@ -717,8 +761,8 @@ html:hover
 
 #section-4 > .CardPng1,#section-4 > .CardPng2,#section-4 > .CardPng3
 {
-    height: 40vh;
-    width: 30vh;
+    height: 40vmin;
+    width: 30vmin;
     background-size: cover;
     z-index: 2;
     color: white;
@@ -727,12 +771,12 @@ html:hover
     align-items: flex-start;
     justify-content: flex-end;
     z-index: 1;
-    box-shadow: 2vh 4vh rgba(0, 0, 0, 0.5);
+    box-shadow: 2vmin 4vmin rgba(0, 0, 0, 0.5);
 }
 
 .CardPng1 > h1, .CardPng1 > p, .CardPng2 > h1, .CardPng2 > p, .CardPng3 > h1, .CardPng3 > p
 {
-    padding: 1vh;
+    padding: 1vmin;
     z-index: 2;
     color: white;
     opacity: 0;
@@ -741,13 +785,13 @@ html:hover
 
 .CardPng1 > button, .CardPng2 > button, .CardPng3 > button
 {
-    width: 10vh;
-    height: 4vh;
-    margin: 1vh;
-    padding: 1vh;
+    width: 10vmin;
+    height: 4vmin;
+    margin: 1vmin;
+    padding: 1vmin;
     z-index: 2;
     background: white;
-    border-radius: 0.1vh;
+    border-radius: 0.1vmin;
     border-color: white;
     color: black;
     opacity: 0;
@@ -773,8 +817,8 @@ html:hover
 {
     content: " ";
     opacity: 0;
-    height: 40vh;
-    width: 30vh;
+    height: 40vmin;
+    width: 30vmin;
     position: absolute;
     z-index: 1;
     transition: 2s;
@@ -816,10 +860,10 @@ html:hover
 
 #section-5 > .BigCard1, #section-5 > .BigCard2, #section-5 > .BigCard3
 {
-    width: 40vh;
-    height: 30vh;
+    width: 40vmin;
+    height: 30vmin;
     background-color: white;
-    box-shadow: 2vh 4vh rgba(0, 0, 0, 0.5);
+    box-shadow: 2vmin 4vmin rgba(0, 0, 0, 0.5);
     transition: 2s;
     display: flex;
     flex-direction: column;
@@ -830,23 +874,23 @@ html:hover
 
 .BigCard1 > h1, .BigCard1 > p,.BigCard2 > h1, .BigCard2 > p,.BigCard3 > h1, .BigCard3 > p
 {
-    margin: 1vh 2VH;
+    margin: 1vmin 2vmin;
     opacity: 0;
     transition: 2s;
-    transform: translateY(8vh);
+    transform: translateY(8vmin);
     text-align: center;
 }
 
 .BigCard1::before,.BigCard2::before,.BigCard3::before
 {
     content: " ";
-    width: 32vh;
-    height: 20vh;
+    width: 32vmin;
+    height: 20vmin;
     position: absolute;
     background-size: cover;
-    border-radius: 1vh;
-    box-shadow: 1vh 2vh rgba(0, 0, 0, 0.5);
-    transform: translateY(-10vh);
+    border-radius: 1vmin;
+    box-shadow: 1vmin 2vmin rgba(0, 0, 0, 0.5);
+    transform: translateY(-10vmin);
     transition: 2s;
 }
 
@@ -867,18 +911,18 @@ html:hover
 
 #section-5 > .BigCard1:hover,#section-5 > .BigCard2:hover,#section-5 > .BigCard3:hover
 {
-    height: 50vh;
+    height: 50vmin;
 }
 
 .BigCard1:hover::before,.BigCard2:hover::before,.BigCard3:hover::before
 {
-    transform: translateY(-20vh);
+    transform: translateY(-20vmin);
 }
 
 .BigCard1:hover > h1, .BigCard1:hover  > p,.BigCard2:hover  > h1, .BigCard2:hover  > p,.BigCard3:hover  > h1, .BigCard3:hover  > p
 {
     opacity: 1;
-    transform: translateY(0vh);
+    transform: translateY(0vmin);
 }
 
 /* SuperBigCard */
@@ -901,24 +945,24 @@ html:hover
 {
     background-image: url(sony-playstation.gif);
     background-size: cover;
-    width: 60vh;
-    height: 40vh;
-    box-shadow: 2vh 4vh rgba(0, 0, 0, 0.5);
-    border: 0.2vh solid white;
-    border-radius: 1vh;
+    width: 60vmin;
+    height: 40vmin;
+    box-shadow: 2vmin 4vmin rgba(0, 0, 0, 0.5);
+    border: 0.2vmin solid white;
+    border-radius: 1vmin;
     content: " ";
     position: absolute;
 }
 
 .MiniBigCard
 {
-    width: 60vh;
-    height: 30vh;
+    width: 60vmin;
+    height: 30vmin;
     background-color: black;
-    transform: translateX(-5vh);
+    transform: translateX(-5vmin);
     color: white;
-    border-radius: 1vh;
-    border: 0.2vh solid white;
+    border-radius: 1vmin;
+    border: 0.2vmin solid white;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -929,9 +973,9 @@ html:hover
 
 .MiniBigCard > h1, .MiniBigCard > p
 {
-    margin: 8vh;
-    margin-top: 1vh;
-    margin-bottom: 1vh;
+    margin: 8vmin;
+    margin-top: 1vmin;
+    margin-bottom: 1vmin;
 }
 
 .SuperBigCard:hover > .MiniBigCard
